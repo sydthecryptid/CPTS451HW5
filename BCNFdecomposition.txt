@@ -1,0 +1,13 @@
+Answers for Part 2, scratch paper work in HW5Q2.jpg
+
+1. R(A, B, C, D, E, F), FDs: A-> BC, D-> AF
+
+a. Minimal keys: D, E. (D can produce ABCD based on the FDs and E is also needed on lhs)
+b. Decompose to bcnf form: R1(A,B,C), R2(A,D,F), R3(D,E)
+c. Are functional dependencies preserved? : Yes, R1 still contains A-> BC and R2 contains D-> AF
+
+2. S(A, B, C, D), FDs: ABC -> D, D-> A
+
+a. Minimal keys: A, B, C (can produce all attributes) and B, C, D (B and C produce themselves and D-> A holds)
+b. Decompose to bcnf form: R1(A, D), R2(B, C, D)
+c. Are functional dependencies preserved?: No, R1 still contains D-> A, but new form cannot recreate ABC-> D
